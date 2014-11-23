@@ -26,8 +26,8 @@
 
 <?php
 	$book = array("title" => "PHP Book",
-				  "author" => "Koterov",
-				  "pages" => "1100");
+		      "author" => "Koterov",
+		       "pages" => "1100");
 	echo 'Недавно я прочитал книгу ' . $book["title"]. ' написанную автором '. $book["author"]. ' я осилил все ' . $book["pages"]. ' страниц, мне она очень понравилась. На самом деле я ее еще читаю))))';
 
 ?>
