@@ -86,7 +86,7 @@ echo "<br>";
         print_r($date);
       echo '</pre>';
     echo 'Массив после сортировки: <br><br>';
-    arsort($date);
+    asort($date);
     foreach($date as $key => $value) {
         echo $key  . ' Unix time: ' . "$value" . ' GMT: ' . date("d/m/Y", $value) . '</b><br>';
       }
