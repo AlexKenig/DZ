@@ -1,3 +1,4 @@
+<?PHP  header("Content-Type: text/html; charset=utf-8");?>
 <?php
 if (!isset($_POST['id']) || empty($_POST['id'])){
     
