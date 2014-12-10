@@ -59,7 +59,7 @@ function parse_basket($basket) {
       
         
         
-        $all ['количество'][] = $discount['stock']; // получается это то кол-во что идет наруки человеку ога это все изменить 3 строки надо было???? да  а я сижу функуии выдумываю 
+        $all ['количество'][] = $discount['stock'];                             // получается это то кол-во что идет наруки человеку 
         $all ['сумма'][] = $discount['price_total'];      
         
         echo "<pre>";
@@ -69,7 +69,7 @@ function parse_basket($basket) {
                            '| Скидка: ' . $discount['skidka'] .
                  ' | Цена со скидкой: ' . $discount['price'] .
              ' | Количество заказано: ' . $params['количество заказано'] .
-             ' | Наличие: ' . $discount['stock'] .
+                         ' | Наличие: ' . $discount['stock'] .                  // добавлена это строка
           ' | Стоимость (по наличию): ' . $discount['price_total'] . 'р.';
         echo "<br><br>"; 
          // так удобнее
@@ -111,7 +111,7 @@ function discount($price, $amount, $diskont, $name, $instock) {
     return array('skidka' => $skidka."0%",
                  'price'=> $price_with_diskont_per_item,
                  'price_total' => $total_price_all_item_with_discont,
-                 'stock' => $amount
+                 'stock' => $amount                                             //и тут добавлено
                  );
 }
 
