@@ -94,20 +94,23 @@ function show_t() {
          }
          case 'show':{
              if(!isset($_SESSION['bd'][$id])){  
-                 //header 404;
                  header("Location: urok6.php");
                  exit;
              }
              if(isset($_POST['main_form_submit'])) {
+                 
                         $result = check_form($_POST['title'],$_POST['price'],$_POST['seller_name']);
                         if($result){
                             $_SESSION['bd'][$id] = $_POST;
+                            //unset($_SESSION['bd']['id']);
+                                header("Location: urok6.php"); // очистка формы после редактирования и сохранения
+                                exit;
                         }else{
                             echo '<p><b>Вы не ввели необходимые поля</b></p>';
                         }
             }
-             $ad = $_SESSION['bd'][$id];
-             break;
+            $ad = $_SESSION['bd'][$id];
+            break;
          }
      }
  }else{
